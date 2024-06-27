@@ -2,7 +2,7 @@ from PIL import Image
 import requests
 from segmenter import Segmenter
 
-from image_combine import combine
+from image_utils import combine
 
 
 url = "https://unsplash.com/photos/8Nc_oQsc2qQ/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjcxMjAwNzI0&force=true&w=640"
