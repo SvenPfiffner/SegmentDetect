@@ -1,0 +1,9 @@
+setup.py
+segmentdetect/__init__.py
+segmentdetect/gui.py
+segmentdetect/segmenter.py
+segmentdetect.egg-info/PKG-INFO
+segmentdetect.egg-info/SOURCES.txt
+segmentdetect.egg-info/dependency_links.txt
+segmentdetect.egg-info/requires.txt
+segmentdetect.egg-info/top_level.txt

@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: segmentdetect
+Version: 1.0
+Summary: Semantic segmentation with CLIP
+Author: Sven Pfiffner
+Author-email: sven.pfiffner@gmail.com
+Keywords: python,CLIP,semantic segmentation,segmentation,image segmentation,computer vision,deep learning,transformers
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Dist: torch
+Requires-Dist: numpy
+Requires-Dist: Pillow
+Requires-Dist: cv2
+Requires-Dist: transformers
+
+A lightweight package for semantic image segmentation with CLIP.

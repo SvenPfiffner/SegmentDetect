@@ -1,0 +1,5 @@
+torch
+numpy
+Pillow
+cv2
+transformers

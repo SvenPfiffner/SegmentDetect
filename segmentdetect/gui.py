@@ -1,7 +1,6 @@
 import streamlit as st
 from PIL import Image
 from segmenter import Segmenter
-from image_utils import combine, build_masks, inpaint
 
 def process_image_and_prompt(image, prompt, threshold):
     # Your function logic here
@@ -10,10 +9,9 @@ def process_image_and_prompt(image, prompt, threshold):
     # Convert the uploaded image to a PIL image
     image = Image.open(image)
     segmenter = Segmenter()
-    preds = segmenter.segment(image, prompt)
-    preds_images = build_masks(image.size, preds, threshold)
-    overlay, inp = combine(image, preds_images, threshold), inpaint(image, preds_images)
-    return overlay, inp
+    preds_images = segmenter.get_segmentation_masks(image, prompt, threshold)
+    overlay = Segmenter.overlay(image, preds_images)
+    return overlay
 
 def main():
     st.title("CLIP - Zero Shot Segmentation")
@@ -34,9 +32,8 @@ def main():
     if st.button("Process"):
         if image is not None and prompt != "":
             prompt = prompt.split(",")
-            overlay, inpaint = process_image_and_prompt(image, prompt, threshold)
+            overlay = process_image_and_prompt(image, prompt, threshold)
             st.image(overlay, caption='Result Segmentation')
-            st.image(inpaint, caption='Inpainting Mask')
         else:
             st.write("Please upload an image and enter a prompt.")
 
