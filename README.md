@@ -13,6 +13,18 @@ by wrapping the [```CLIPSegProcessor```](https://huggingface.co/docs/transformer
 
 </div>
 
+## Installation
+A ``requirements.txt``` for authomatic dependency installation is TODO. For now, make sure to have the following dependencies met
+```
+python>=3.9
+torch>=2.3.1
+numpy>=2.0.0
+pillow>=10.3.0
+transformers>=4.41.2
+streamlit>=1.36.0 (in case of webui use)
+```
+Earlier versions of python or packages might work, but have not been tested
+
 ## How to use
 **UI**
 The project allows demoing the produced masks via a streamlit webui. To start the UI, run
@@ -66,5 +78,5 @@ prompts = ["Human", "Car", ...]
 segmentation = segmenter.get_segmentation_masks(img,
                 prompts, threshold=0.8)
 
-debug_img = egmentdetect.Segmenter.overlay(img, segmentation)
+debug_img = segmentdetect.Segmenter.overlay(img, segmentation)
 ```
