@@ -70,7 +70,7 @@ class Segmenter:
             masks (dict): A dictionary of predicted masks.
 
         Returns:
-            PIL.Image.Image: The overlaid image.
+            PIL.Image.Image: The overlayed image.
 
         """
         # Generate as many random colors as there are prompts
