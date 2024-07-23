@@ -14,7 +14,7 @@ by wrapping the [```CLIPSegProcessor```](https://huggingface.co/docs/transformer
 </div>
 
 ## Installation
-A ``requirements.txt``` for authomatic dependency installation is TODO. For now, make sure to have the following dependencies met
+A ``requirements.txt``` for automatic dependency installation is TODO. For now, make sure to have the following dependencies met
 ```
 python>=3.9
 torch>=2.3.1
